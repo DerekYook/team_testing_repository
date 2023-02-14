@@ -30,6 +30,12 @@ public class TodoController {
         this.todoService = todoService;
         this.mapper = mapper;
     }
+
+    @GetMapping("/")
+    public void welcome(){
+        System.out.println("To-do Application!");
+    }
+
     @PostMapping
     public ResponseEntity postTodo(@Valid @RequestBody TodoPostDto todoDto){
         Todo todo = mapper.todoPostDtoToTodo(todoDto);
