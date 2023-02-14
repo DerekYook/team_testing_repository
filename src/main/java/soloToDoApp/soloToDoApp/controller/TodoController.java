@@ -32,8 +32,8 @@ public class TodoController {
     }
 
     @GetMapping("/")
-    public void welcome(){
-        System.out.println("To-do Application!");
+    public String welcome(){
+        return "To-do Application!";
     }
 
     @PostMapping
