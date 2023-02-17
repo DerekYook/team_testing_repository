@@ -40,6 +40,7 @@ public class TodoController {
     public ResponseEntity postTodo(@Valid @RequestBody TodoPostDto todoDto){
         Todo todo = mapper.todoPostDtoToTodo(todoDto);
         Todo resultTodo = todoService.createTodo(todo);
+        //todo list
 
         URI location = UriCreator.createUri(TODO_DEFAULT_URL,resultTodo.getId());
 
